@@ -6,6 +6,7 @@ Created on Feb 11, 2015
 from Tkinter import *
 import Tkinter
 from FileManip import FileManip
+from NetChecker import NetChecker
 
 class MainMenu(Frame):
     def __init__(self, master=None):
@@ -30,7 +31,7 @@ class MainMenu(Frame):
 
         self.URLtoPartSpecButton = Button(self, text = 'URL to Part Spec',
              padx=5, pady=5, width=20, height=3, bg=bcolor, fg=tcolor, font=tfont,
-             activebackground=acolor, command=lambda: self.callURLToPartSpecsApp())
+             activebackground=acolor, state='disabled', command=lambda: self.callURLToPartSpecsApp())
         self.URLtoPartSpecButton.grid(row=baserow, column=basecolumn, padx=10, pady=10)
 
         self.netlistButton = Button(self, text = 'EAGLE to Net list \n Compiler and Organizer',
@@ -38,10 +39,10 @@ class MainMenu(Frame):
              font=tfont, activebackground=acolor, command=lambda: self.callEAGLENetlistCompilerAndOrgranizerApp())
         self.netlistButton.grid(row=baserow, column=basecolumn+1, padx=10, pady=10)
 
-        self.netViewerButton = Button(self, text = 'EAGLE Net Viewer', padx=5,
-             pady=5, width=20, bg=bcolor, height=3, state='disabled', fg=tcolor,
-             font=tfont, activebackground=acolor, command=lambda: self.callEAGLENetViewerApp())
-        self.netViewerButton.grid(row=baserow+1, column=basecolumn, padx=10, pady=10)
+        self.netCheckerButton = Button(self, text = 'EAGLE Net Checker', padx=5,
+             pady=5, width=20, bg=bcolor, height=3, state='normal', fg=tcolor,
+             font=tfont, activebackground=acolor, command=lambda: self.callEAGLENetCheckerApp())
+        self.netCheckerButton.grid(row=baserow+1, column=basecolumn, padx=10, pady=10)
 
         self.quitButton = Button(self, text='Quit', padx=5, pady=5, width=20,
              height=3,bg=bcolor, fg=tcolor, font=tfont, activebackground=acolor,
@@ -84,8 +85,9 @@ class MainMenu(Frame):
     def callEAGLENetlistCompilerAndOrgranizerApp(self):
         pass
 
-    def callEAGLENetViewerApp(self):
-        pass
+    def callEAGLENetCheckerApp(self):
+        nc = NetChecker() # has some indexing errors
+        nc.newInstance()
 
 
 if __name__ == '__main__':
