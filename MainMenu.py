@@ -7,6 +7,7 @@ from Tkinter import *
 import Tkinter
 from FileManip import FileManip
 from NetChecker import NetChecker
+from EagleFilesToCSV import EagleFilesToCSV
 
 class MainMenu(Frame):
     def __init__(self, master=None):
@@ -35,7 +36,7 @@ class MainMenu(Frame):
         self.URLtoPartSpecButton.grid(row=baserow, column=basecolumn, padx=10, pady=10)
 
         self.netlistButton = Button(self, text = 'EAGLE to Net list \n Compiler and Organizer',
-             padx=5, pady=5, width=20, height=3, bg=bcolor, state='disabled', fg=tcolor,
+             padx=5, pady=5, width=20, height=3, bg=bcolor, state='normal', fg=tcolor,
              font=tfont, activebackground=acolor, command=lambda: self.callEAGLENetlistCompilerAndOrgranizerApp())
         self.netlistButton.grid(row=baserow, column=basecolumn+1, padx=10, pady=10)
 
@@ -83,7 +84,7 @@ class MainMenu(Frame):
         pass
 
     def callEAGLENetlistCompilerAndOrgranizerApp(self):
-        pass
+        efc = EagleFilesToCSV(master=Toplevel())
 
     def callEAGLENetCheckerApp(self):
         nc = NetChecker(master=Toplevel()) # has some indexing errors
