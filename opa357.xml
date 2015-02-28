@@ -1,0 +1,27 @@
+
+<ICE_parse_keys>
+	<part>
+		<partname>OPA357</partname>
+		<partnumber>(?&#60;&#61;Digi&#45;Key Part Number)(.*)</partnumber>
+		<quantity></quantity>
+		<manufacturer> (?&#60;&#61;Manufacturer)(.*)</manufacturer>
+		<manufacturer_part_number>(?&#60;&#61;Manufacturer Part Number)(.*)</manufacturer_part_number>
+		<description>(?&#60;&#61;Description)(.*)</description>
+		<lead_status_ROHS_status>(?&#60;&#61;Lead Free Status / RoHS Status)(.*)</lead_status_ROHS_status>
+		<category>(?&#60;&#61;Category )(.*)</category>
+		<family>(?&#60;&#61;Family)(.*)</family>
+		<series>(?&#60;&#61;Series)(.*)</series>
+		<packaging>(?&#60;&#61;Packaging)(.*)</packaging>
+		<amplifier_type>(?&#60;&#61;Amplifier)(.*)</amplifier_type>
+		<number_of_circuits>(?&#60;&#61;Number of Circuits)(.*)</number_of_circuits>
+		<slew_rate>(?&#60;&#61;Slew Rate)(.*)</slew_rate>
+		<output_type>(?&#60;&#61;Output Type)(.*)</output_type>
+		<gain_bandwidth_product>(?&#60;&#61;Output Type)(.*)</gain_bandwidth_product>
+		<db_bandwidth>(?&#60;&#61;Gain Bandwidth Product)(.*)</db_bandwidth>
+		<neg3d_bandwidth>(?&#60;&#61;&#45;3db Bandwidth)(.*)</neg3d_bandwidth>
+		<current_input_bias>(?&#60;&#61;Curent Input Bias)(.*)</current_input_bias>
+
+		
+	</part>
+</ICE_parse_keys>
+	
